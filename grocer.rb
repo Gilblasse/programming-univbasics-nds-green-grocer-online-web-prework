@@ -28,8 +28,8 @@ def consolidate_cart(cart)
     # end
   end
   # new_array
-  binding.pry
-  cart.reject {|item| !item[:count]}
+  
+  cart.uniq
 end
 
 
