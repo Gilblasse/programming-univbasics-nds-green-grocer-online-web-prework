@@ -66,17 +66,27 @@ def apply_clearance(cart)
       item[:price] -= twenty_percent
     end
   end
+  cart
 end
 
 def checkout(cart, coupons)
   grand_total = 0
   new_consolidate_cart = consolidate_cart(cart)
-  coupons_applied = apply_coupons(new_consolidate_cart)
+  coupons_applied = apply_coupons(new_consolidate_cart, coupons)
   discounts_applied = apply_clearance(coupons_applied)
+
+  # row = 0
+  # while row < discounts_applied.size
+  #   grand_total += discounts_applied[row][:price] * discounts_applied[row][:count]
+  #   binding.pry
+  #   row += 1
+  # end
   
   discounts_applied.each do |item|
-    grand_total += item[:price] * item[:count]
+    binding.pry
+    grand_total += (item[:price] * item[:count])
   end
+  
   if grand_total > 100 
     ten_percent = grand_total * 0.1
     grand_total -= ten_percent
