@@ -83,7 +83,6 @@ def checkout(cart, coupons)
   
   discounts_applied.each do |item|
     grand_total += (item[:price] * item[:count])
-    binding.pry
   end
   
   if grand_total > 100 
