@@ -28,7 +28,7 @@ def consolidate_cart(cart)
     # end
   end
   # new_array
-  binding.py
+  binding.pry
   cart.reject {|item| !item[:count]}
 end
 
