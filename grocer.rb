@@ -10,7 +10,7 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
- new_array = []
+# new_array = []
   
   cart.each do |item|
     item[:count] == nil ? item[:count] = 1 : item[:count] += 1
@@ -28,6 +28,7 @@ def consolidate_cart(cart)
     # end
   end
   # new_array
+  cart
 end
 
 
