@@ -77,5 +77,5 @@ def checkout(cart, coupons)
   discounts_applied.each do |item|
     grand_total += item[:price] * item[:count]
   end
-  grand_total
+  if grand_total > 100 
 end
