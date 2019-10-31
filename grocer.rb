@@ -13,7 +13,7 @@ def consolidate_cart(cart)
  new_array = []
   
   cart.each do |item|
-    # item[:count] == nil ? item[:count] = 1 : item[:count] += 1
+    item[:count] == nil ? item[:count] = 1 : item[:count] += 1
     common_item = find_item_by_name_in_collection(item[:item], new_array)
     if common_item != nil
       common_item[:count] += 1
