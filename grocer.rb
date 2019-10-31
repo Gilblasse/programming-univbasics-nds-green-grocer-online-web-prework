@@ -14,20 +14,20 @@ def consolidate_cart(cart)
   
   cart.each do |item|
     item[:count] == nil ? item[:count] = 1 : item[:count] += 1
-    common_item = find_item_by_name_in_collection(item[:item], new_array)
-    if common_item != nil
-      common_item[:count] += 1
-    else
-      unique_item = {
-        :item => item[:item],
-        :price => item[:price],
-        :clearance => item[:clearance],
-        :count => 1
-      }
-      new_array << unique_item
-    end
+    # common_item = find_item_by_name_in_collection(item[:item], new_array)
+    # if common_item != nil
+    #   common_item[:count] += 1
+    # else
+    #   unique_item = {
+    #     :item => item[:item],
+    #     :price => item[:price],
+    #     :clearance => item[:clearance],
+    #     :count => 1
+    #   }
+    #   new_array << unique_item
+    # end
   end
-  new_array
+  # new_array
 end
 
 
