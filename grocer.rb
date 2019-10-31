@@ -28,7 +28,7 @@ def consolidate_cart(cart)
     # end
   end
   # new_array
-  binding.pry
+  # binding.pry
   cart.uniq
 end
 
