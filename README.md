@@ -120,7 +120,6 @@ create.
     * Every item's `:count` will be _at least_ one
     * Where multiple instances of a given item are seen, the instance in the
       new `Array` will have its `:count` increased
-
 _Example_:
 
 Given:
