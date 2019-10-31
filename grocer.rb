@@ -78,7 +78,7 @@ def checkout(cart, coupons)
     grand_total += item[:price] * item[:count]
   end
   if grand_total > 100 
-    ten_percent = (grand_total * 0.1).round(2)
+    ten_percent = grand_total * 0.1
     grand_total -= ten_percent
   end
   grand_total
