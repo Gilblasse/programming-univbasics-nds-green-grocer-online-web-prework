@@ -17,7 +17,6 @@ def consolidate_cart(cart)
     common_item = find_item_by_name_in_collection(item[:item], new_array)
     if common_item != nil
       common_item[:count] += 1
-      new_array << common_item
     else
       unique_item = {
         :item => item[:item],
